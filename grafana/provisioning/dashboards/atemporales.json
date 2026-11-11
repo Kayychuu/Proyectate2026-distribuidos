@@ -1,0 +1,105 @@
+{
+  "id": null,
+  "uid": "atemporales-live",
+  "title": "ATEMPORALES | Observabilidad",
+  "schemaVersion": 40,
+  "version": 1,
+  "timezone": "browser",
+  "refresh": "5s",
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "Brokers registrados",
+      "datasource": "Prometheus",
+      "id": 1,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "targets": [
+        {
+          "expr": "atemporales_broker_registered",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Particiones con subr\u00e9plicas",
+      "datasource": "Prometheus",
+      "id": 2,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "targets": [
+        {
+          "expr": "atemporales_under_replicated_partitions",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Workers activos",
+      "datasource": "Prometheus",
+      "id": 3,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "targets": [
+        {
+          "expr": "atemporales_active_workers",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Eventos acumulados por worker",
+      "datasource": "Prometheus",
+      "id": 4,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "targets": [
+        {
+          "expr": "atemporales_worker_events_total_observed",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Latencia P95, ms",
+      "datasource": "Prometheus",
+      "id": 5,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 16
+      },
+      "targets": [
+        {
+          "expr": "atemporales_worker_latency_p95_ms",
+          "refId": "A"
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "Kafka",
+    "Atemporales"
+  ]
+}

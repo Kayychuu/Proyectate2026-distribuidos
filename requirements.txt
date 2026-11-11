@@ -1,0 +1,10 @@
+streamlit
+kafka-python
+numpy
+pandas
+scipy
+matplotlib
+plotly
+scikit-learn
+prometheus-client
+river
